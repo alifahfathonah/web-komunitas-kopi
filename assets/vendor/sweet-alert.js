@@ -1,26 +1,25 @@
 const flashDataSuccess = $('.flash-data-berhasil').data('berhasil');
 const flashDataError = $('.flash-data-gagal').data('gagal');
 
-if(flashDataSuccess){
+if (flashDataSuccess) {
     Swal.fire({
-        title:'Berhasil',
-        text:flashDataSuccess,
-        icon:'success',
-        allowOutsideClick:false,
-        timer:1500
+        title: 'Berhasil',
+        text: flashDataSuccess,
+        icon: 'success',
+        allowOutsideClick: false
     });
 }
-if(flashDataError){
+if (flashDataError) {
     Swal.fire({
-        title:'Gagal',
-        text:flashDataError,
-        icon:'error',
-        allowOutsideClick:false
+        title: 'Gagal',
+        text: flashDataError,
+        icon: 'error',
+        allowOutsideClick: false
     });
 }
 
 //hapus
-$('.btn-hapus').on('click',function(e){
+$('.btn-hapus').on('click', function(e) {
     e.preventDefault();
     const href = $(this).attr('href');
 
@@ -28,11 +27,11 @@ $('.btn-hapus').on('click',function(e){
         title: 'Konfirmasi Hapus ?',
         text: "Anda yakin ingin menghapus data ini !",
         icon: 'warning',
-        allowOutsideClick:false,
+        allowOutsideClick: false,
         showCancelButton: true,
         cancelButtonColor: '#3085d6',
         confirmButtonColor: '#d33',
-        cancelButtonText:'Tidak',
+        cancelButtonText: 'Tidak',
         confirmButtonText: 'Iya, Hapus',
         reverseButtons: true
     }).then((result) => {
@@ -41,5 +40,3 @@ $('.btn-hapus').on('click',function(e){
         }
     })
 });
-
-

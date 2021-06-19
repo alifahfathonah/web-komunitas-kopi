@@ -8,9 +8,14 @@ class Member_m extends CI_Model {
 
     private $id = 'idmember';
 
+    public function countMember($jk){ 
+        return $this->db->get_where($this->table,['jk'=>$jk])->num_rows();
+    }
+
     public function getAll(){ 
         return $this->db->get($this->table)->result_array();
     }
+
     public function getAllLimit($limit){ 
         return $this->db->order_by($this->id,'DESC')
                         ->get($this->table,$limit)->result_array();

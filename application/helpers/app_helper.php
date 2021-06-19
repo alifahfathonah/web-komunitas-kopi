@@ -47,7 +47,7 @@ function hidePhoneNumber($str){
 function totalPendaftar($idkelas){
     
     $ci =& get_instance();
-    return $ci->db->get_where('mengikuti',['kelas_id'=>$idkelas])->num_rows();
+    return $ci->db->get_where('mengikuti',['kelas_id'=>$idkelas,'status'=>'Verified'])->num_rows();
     
 }
 function listKelasByMember($idmember){

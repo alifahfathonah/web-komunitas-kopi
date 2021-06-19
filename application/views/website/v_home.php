@@ -158,7 +158,7 @@
                                     <div class="inner">
                                         <div class="bar">
                                             <div class="bar-innner">
-                                                <div class="bar-fill" data-percent="60">
+                                                <div class="bar-fill" data-percent="100">
                                                     <div class="percent"></div>
                                                 </div>
                                             </div>

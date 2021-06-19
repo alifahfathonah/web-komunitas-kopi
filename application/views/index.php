@@ -54,7 +54,7 @@ date_default_timezone_set('Asia/Jayapura');
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <img src="<?=base_url('uploads/image/');?><?=$profil->logo==''?'noimage.jpeg':$profil->logo;?>"
+                    <img src="<?=base_url('uploads/image/');?><?=_profil()->logo==''?'noimage.jpeg':_profil()->logo;?>"
                         alt="Logo" height="50" width="50">
                 </div>
                 <div class="sidebar-brand-text mx-3">Komunitas <sup>Kopi</sup></div>
@@ -91,12 +91,17 @@ date_default_timezone_set('Asia/Jayapura');
                     <span>Kelas</span></a>
             </li>
             <?php endif; ?>
-            <?php if($this->session->userdata('level')=='Admin' || $this->session->userdata('level')=='operator'): ?>
+            <?php if($this->session->userdata('level')=='Admin'): ?>
             <!-- Nav Item - Member -->
             <li class="nav-item <?=isset($mMember)?'active':'';?>">
                 <a class="nav-link" href="<?=base_url('menu/member');?>">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Member</span></a>
+            </li>
+            <li class="nav-item <?=isset($mVerifikasi)?'active':'';?>">
+                <a class="nav-link" href="<?=base_url('menu/verifikasi');?>">
+                    <i class="fas fa-fw fa-check"></i>
+                    <span>Verifikasi</span></a>
             </li>
             <?php endif; ?>
             <?php if($this->session->userdata('level')=='Admin'): ?>

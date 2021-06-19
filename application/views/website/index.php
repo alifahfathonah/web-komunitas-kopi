@@ -86,9 +86,12 @@
                                 <?php endif; ?>
                             </ul>
                             <ul class="social-icon-one">
-                                <li><a href="<?=_profil()->facebook;?>"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="<?=_profil()->instagram;?>"><span class="fa fa-instagram"></span></a></li>
-                                <li><a href="<?=_profil()->youtube;?>"><span class="fa fa-youtube"></span></a></li>
+                                <li><a href="<?=_profil()->facebook;?>" target="_blank"><span
+                                            class="fa fa-facebook"></span></a></li>
+                                <li><a href="<?=_profil()->instagram;?>" target="_blank"><span
+                                            class="fa fa-instagram"></span></a></li>
+                                <li><a href="<?=_profil()->youtube;?>" target="_blank"><span
+                                            class="fa fa-youtube"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -255,15 +258,18 @@
                 <div class="footer-bottom">
                     <div class="left-content">
                         <div class="icon"><img src="<?=base_url();?>assets/img/logo.png" alt="" width="60"></div>
-                        <div class="copyright-text"><a href="templateshub.net"><?=_profil()->nama;?></a></a>
+                        <div class="copyright-text"><a href="#"><?=_profil()->nama;?></a></a>
 
                         </div>
                     </div>
                     <div class="right-content">
                         <ul class="social-icon-three">
-                            <li><a href="<?=_profil()->facebook;?>"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="<?=_profil()->instagram;?>"><span class="fa fa-instagram"></span></a></li>
-                            <li><a href="<?=_profil()->youtube;?>"><span class="fa fa-youtube"></span></a></li>
+                            <li><a href="<?=_profil()->facebook;?>" target="_blank"><span
+                                        class="fa fa-facebook"></span></a></li>
+                            <li><a href="<?=_profil()->instagram;?>" target="_blank"><span
+                                        class="fa fa-instagram"></span></a></li>
+                            <li><a href="<?=_profil()->youtube;?>" target="_blank"><span
+                                        class="fa fa-youtube"></span></a></li>
                         </ul>
                     </div>
                 </div>

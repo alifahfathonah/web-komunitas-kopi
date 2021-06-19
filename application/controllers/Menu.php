@@ -21,12 +21,11 @@ class Menu extends CI_Controller {
     public function index()
     {
         $data['mDashboard'] = true;
-        // $data['dashboard'] = [
-        //     't_penghuniL'=>$this->penghuni_m->countPenghuni('L'),
-        //     't_penghuniP'=>$this->penghuni_m->countPenghuni('P'),
-        //     't_pengumuman'=>$this->user_m->getCount('pengumuman'),
-        //     't_pengguna'=>$this->user_m->getCount('pengguna')
-        // ];
+        $data['dashboard'] = [
+            't_member'=>$this->user_m->getCount('member'),
+            't_kelas'=>$this->user_m->getCount('kelas'),
+            't_pengguna'=>$this->user_m->getCount('pengguna')
+        ];
         $data['content'] = 'dashboard';
         $this->load->view('index',$data);
     }
@@ -52,6 +51,14 @@ class Menu extends CI_Controller {
         $data['mMember'] = true;
         $data['member'] = $this->member_m->getAll();
         $data['content'] = 'v_member';
+        $this->load->view('index',$data);
+    }
+
+    public function verifikasi()
+    {
+        $data['mVerifikasi'] = true;
+        $data['verify'] = $this->mengikuti_m->getAll();
+        $data['content'] = 'v_verifikasi';
         $this->load->view('index',$data);
     }
 
