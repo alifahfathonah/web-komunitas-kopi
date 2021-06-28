@@ -87,7 +87,7 @@
                             </ul>
                             <ul class="social-icon-one">
                                 <li><a href="<?=_profil()->facebook;?>" target="_blank"><span
-                                            class="fa fa-facebook"></span> <?=_profil()->facebook;?></a></li>
+                                            class="fa fa-facebook"></span></a></li>
                                 <li><a href="<?=_profil()->instagram;?>" target="_blank"><span
                                             class="fa fa-instagram"></span></a></li>
                                 <li><a href="<?=_profil()->youtube;?>" target="_blank"><span
