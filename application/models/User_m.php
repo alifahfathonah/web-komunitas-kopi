@@ -37,7 +37,7 @@ class User_m extends CI_Model {
     }
 
     public function hapus($id){
-        $this->db->delete($this->table,[$this->id=>$id]);
+        return $this->db->delete($this->table,[$this->id=>$id]);
     }
 
     public function getCount($table){

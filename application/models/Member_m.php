@@ -29,13 +29,13 @@ class Member_m extends CI_Model {
         $this->db->insert($this->table,$data);
     }
 
-    public function editData($data,$id){
-        $this->db->update($this->table,$data,[$this->id=>$id]);
-    }
+    // public function editData($data,$id){
+    //     $this->db->update($this->table,$data,[$this->id=>$id]);
+    // }
 
-    public function hapus($id){
-        $this->db->delete($this->table,[$this->id=>$id]);
-    }
+    // public function hapus($id){
+    //     $this->db->delete($this->table,[$this->id=>$id]);
+    // }
 
 }
 

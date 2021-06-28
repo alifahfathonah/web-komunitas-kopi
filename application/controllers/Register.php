@@ -57,7 +57,7 @@ class Register extends CI_Controller {
 
         $this->load->library('email',$config);
         $this->email->set_newline("\r\n");
-        $this->email->from('komunitaskopimkw@gmail.com', 'Admin Komunitas Kopi Manokwari');
+        $this->email->from(_profil()->email, 'Admin Komunitas Kopi Manokwari');
         $this->email->to($email);
         // $this->email->cc('another@another-example.com');
         // $this->email->bcc('them@their-example.com');

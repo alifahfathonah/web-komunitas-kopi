@@ -167,7 +167,7 @@
                                 </div>
                             </div>
                             <div class="text">Peserta Kelas :
-                                <?= $row['jumlah'].' dari '.$row['jumlah'].' Orang'; ?></div>
+                                <?= totalPendaftar($row['idkelas']).' dari '.$row['jumlah'].' Orang'; ?></div>
                             <div class="bottom-content">
                                 <div class="link-btn"><a href="<?=base_url('website/detail_kelas/').$row['idkelas'];?>"
                                         class="theme-btn btn-style-one"><span>Lihat

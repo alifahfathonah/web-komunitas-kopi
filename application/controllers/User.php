@@ -61,8 +61,12 @@ class User extends CI_Controller {
     }
 
     public function hapus($id){
-        $this->user_m->hapus($id);
-        $this->session->set_flashdata('success','Anda berhasil menghapus data Pengguna');
+        $del = $this->user_m->hapus($id);
+        if($del){
+            $this->session->set_flashdata('success','Anda berhasil menghapus data Pengguna');
+        }else{
+            $this->session->set_flashdata('error','Maaf anda gagal menghapus data pengguna karena data terkait dengan data lainnya');
+        }
         redirect('menu/pengguna');
     }
 

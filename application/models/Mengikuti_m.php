@@ -50,17 +50,25 @@ class Mengikuti_m extends CI_Model {
                         ->get($this->table.' x')->row_array();
     }
 
+    public function getAllKelas($id){ 
+        return $this->db->select('x.*,x1.*,x2.*')
+                        ->join('member x1','x1.idmember=x.member_id')
+                        ->join('kelas x2','x2.idkelas=x.kelas_id')
+                        ->where('x1.pengguna_id',$id)
+                        ->get($this->table.' x')->result_array();
+    }
+
     public function tambahBaru($data){
         $this->db->insert($this->table,$data);
     }
 
-    public function editData($data,$id){
-        $this->db->update($this->table,$data,[$this->id=>$id]);
-    }
+    // public function editData($data,$id){
+    //     $this->db->update($this->table,$data,[$this->id=>$id]);
+    // }
 
-    public function hapus($id){
-        $this->db->delete($this->table,[$this->id=>$id]);
-    }
+    // public function hapus($id){
+    //     $this->db->delete($this->table,[$this->id=>$id]);
+    // }
 
 }
 

@@ -46,10 +46,19 @@ class Member extends CI_Controller {
             'charset'   =>'iso-8859-1',
             'starttls'  =>true
         ];
+        // $config = [
+        //     'protocol'  =>'smtp',
+        //     'smtp_host' =>'ssl://nokenstore.com',
+        //     'smtp_port' =>465,
+        //     'smtp_user' =>'admin@nokenstore.com',
+        //     'smtp_pass' =>'Linuxdebian7',
+        //     'mailtype'  =>'html',
+        //     'charset'   =>'iso-8859-1'
+        // ];
 
         $this->load->library('email',$config);
         $this->email->set_newline("\r\n");
-        $this->email->from('komunitaskopimkw@gmail.com', 'Admin Komunitas Kopi Manokwari');
+        $this->email->from(_profil()->email, 'Admin Komunitas Kopi Manokwari');
         $this->email->to($email);
         // $this->email->cc('another@another-example.com');
         // $this->email->bcc('them@their-example.com');

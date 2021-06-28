@@ -21,13 +21,6 @@ function submit(x) {
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <!-- <a href="#" class="btn btn-primary btn-icon-split btn-sm" data-toggle="modal" data-target="#kelasModal"
-            onclick="submit('add');">
-            <span class="icon text-white-50">
-                <i class="fas fa-plus"></i>
-            </span>
-            <span class="text">Tambah</span>
-        </a> -->
     </div>
     <div class="card-body">
         <div class="table-responsive">
